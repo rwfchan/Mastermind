@@ -130,7 +130,7 @@ bool check_not_valid (char user_input) {
   return true;
 }
 bool check_input(char user_input) {
-  return !(isnumber(user_input) || check_not_valid(user_input));
+  return !(isdigit(user_input) || check_not_valid(user_input));
 }
 
 void press_enter() {
