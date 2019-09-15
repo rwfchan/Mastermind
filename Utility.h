@@ -5,6 +5,7 @@
 #ifndef MASTERMIND_GAME_UTILITY_H
 #define MASTERMIND_GAME_UTILITY_H
 #include "colors.h"
+#include <climits>
 
   // Rule set explain
   void rules();
