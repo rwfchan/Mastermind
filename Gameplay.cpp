@@ -84,9 +84,10 @@ std::string compare(Color_code player_code, Color_code master_code) {
   }
 
   // Print out appropiate clue base on player's answer
-  if (compare.str().empty()) { std::cout << "No guesses are correct" << std::endl; }
-  else { std::cout << "Here is your clue: " << compare.str() << std::endl; }
-
+  if (compare.str().empty()) { 
+	std::cout << "No guesses are correct" << std::endl; 
+  }
+ 
   return compare.str();
 };
 

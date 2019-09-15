@@ -32,18 +32,23 @@ int main() {
               <<color_magenta<<"P"<<color_normal<<")"
               << std::endl;
     Color_code guess = user_input();
-
     std::cout << guess << std::endl;
 
+    std::string clue = compare(guess, master_code);
+
     // Compare player's guess with master_code
-    if (compare(guess, master_code) != "1111") std::cout << "Another guess? (" << 10 - i << " tries remaining)" <<  std::endl;
-    else {
+    if (clue != "1111") {
+      std::cout << "Here is your clue: " << clue << std::endl; 
+      std::cout << "Another guess? (" << 10 - i << " tries remaining)" <<  std::endl;
+    } else {
       std::cout << "You guessed it! The master code is " << master_code << std::endl;
-      break;
+      return 0;
     }
   }
 
   // Game Over
   std::cout << "All guesses have been used up" << std::endl;
   std::cout << "Pay closer attention next time!" << std::endl;
+
+  return 0;
 }
